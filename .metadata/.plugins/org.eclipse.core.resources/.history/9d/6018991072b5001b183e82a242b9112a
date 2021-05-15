@@ -1,0 +1,9 @@
+package fr.pastalapate.CustomHolograms.utils;
+
+public class LocationUtils {
+
+	public int ifTilde(String location, Player sender) {
+		if()
+	}
+	
+}

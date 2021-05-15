@@ -1,0 +1,13 @@
+package fr.pastalapate.CustomHolograms.utils;
+
+import org.bukkit.entity.Player;
+
+public class LocationUtils {
+
+	public int ifTilde(String texttotransform, Player sender) {
+		if(texttotransform == "~") {
+			return ;
+		}
+	}
+	
+}

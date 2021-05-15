@@ -1,0 +1,7 @@
+package fr.pastalapate.CustomHolograms.utils;
+
+public enum LocationType {
+
+	X,Y,Z;
+	
+}

@@ -1,0 +1,21 @@
+package fr.pastalapate.CustomHolograms.utils;
+
+import org.bukkit.entity.Player;
+
+
+public class LocationUtils {
+
+	public int ifTilde(String texttotransform,Player sender, LocationType locationType) {
+		if(texttotransform == "~") {
+			if(locationType.equals(LocationType.X)) {
+				return sender.getLocation().getBlockX();
+			} else if(locationType.equals(LocationType.Y)) {
+				return sender.getLocation().getBlockY();
+			}
+		} else {
+			return texttotransform;
+		}
+		return 0;
+	}
+	
+}
