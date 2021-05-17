@@ -1,0 +1,57 @@
+package fr.pastalapate.CustomHolograms.placeholders;
+
+public class HologramPlaceHolder extends PlaceholderExpansion {
+
+	private CHMain plugin;
+	
+	public HologramPlaceHolder(CHMain chMain) {
+		this.plugin = chMain;
+	}
+
+	@Override
+    public boolean canRegister(){
+		 return true;
+    }
+	
+	@Override
+	public String getAuthor() {
+		return "PastaLaPate";
+	}
+
+	@Override
+	public String getIdentifier() {
+		return "holograms";
+	}
+	
+	@Override
+    public String getRequiredPlugin(){
+        return "CustomHolograms";
+    }
+
+	@Override
+	public String getVersion() {
+		return "0.0.3";
+	}
+	
+	@Override
+	public boolean persist() {
+		return true;
+	}
+	
+	@Override
+	public String onPlaceholderRequest(Player p, String identifier){
+		
+		if(p == null) {
+			return "";
+		}
+		
+        // %holograms.LatestHologramCreate%
+        if(identifier.equals("LatestHologramCreate")){
+            return plugin.data.getLatestHologramCreate();
+        }
+        // We return null if an invalid placeholder (f.e. %example_placeholder3%) 
+        // was provided
+        return null;
+    }
+	
+}

@@ -1,0 +1,21 @@
+name: CustomHolograms
+version : 0.0.3
+main : fr.pastalapate.CustomHolograms.CHMain
+commands :
+  hologram:
+    description: "Open holograms help"
+    permission: ch.commands.hologram
+
+permissions:
+  ch.:
+    commands.*:
+      description: Gives access to all Auction commands
+      children:
+        holograms.create: true
+      holograms.create:
+        description: Allows players to create holograms
+        
+        default: op
+        
+softdepend: [PlaceholderAPI]
+depend: [PlaceholderAPI]

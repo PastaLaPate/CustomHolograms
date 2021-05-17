@@ -1,0 +1,25 @@
+package fr.pastalapate.CustomHolograms;
+
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+public class HologramExpansion extends PlaceholderExpansion{
+
+	@Override
+	public String getAuthor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getIdentifier() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getVersion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

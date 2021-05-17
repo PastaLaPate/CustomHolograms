@@ -1,0 +1,49 @@
+package fr.pastalapate.CustomHolograms;
+
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.logging.Level;
+
+import fr.pastalapate.CustomHolograms.Files.dataManager;
+import fr.pastalapate.CustomHolograms.commands.HologramsCommands;
+
+public class CHMain extends JavaPlugin {
+
+	public dataManager data;
+	public static CHMain instance;
+	
+	FileConfiguration config = this.getConfig();
+	@Override
+	public void onEnable() {
+		
+		System.out.println(config.getString("messages.console.utils.prefix") + config.getString("messages.console.utils.enabling-message"));
+		
+		if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+        } else {
+            /*
+             * We inform about the fact that PlaceholderAPI isn't installed and then
+             * disable this plugin to prevent issues.
+             */
+            getLogger().log(Level.SEVERE ,"Could not find PlaceholderAPI! This plugin is required.");
+            Bukkit.getPluginManager().disablePlugin(this);
+        }
+		
+		instance = this;
+		saveDefaultConfig();
+		this.data = new dataManager(this);
+		
+		getCommand("hologram").setExecutor(new HologramsCommands(this));
+		new HologramExpansion().register();
+	}
+	
+	@Override
+	public void onDisable() {
+		instance = null;
+	}
+	
+	public static CHMain getInstance() {
+		return instance;
+	}
+}

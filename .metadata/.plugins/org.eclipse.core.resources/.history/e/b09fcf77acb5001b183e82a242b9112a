@@ -1,0 +1,44 @@
+package fr.pastalapate.CustomHolograms.placeholders;
+
+import org.bukkit.OfflinePlayer;
+
+import fr.pastalapate.CustomHolograms.CHMain;
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+public class HologramPlaceHolder extends PlaceholderExpansion {
+
+	private CHMain plugin;
+	
+	@Override
+    public boolean canRegister(){
+        return true;
+    }
+	
+	@Override
+	public String getAuthor() {
+		return "PastaLaPate";
+	}
+
+	@Override
+	public String getIdentifier() {
+		return "holograms";
+	}
+
+	@Override
+	public String getVersion() {
+		return "0.0.3";
+	}
+	
+	@Override
+    public String onRequest(OfflinePlayer player, String identifier){
+  
+        // %holograms.LatestHologramCreate%
+        if(identifier.equals("LatestHologramCreate")){
+            return plugin.data.getLatestHologramCreate();
+        }
+        // We return null if an invalid placeholder (f.e. %example_placeholder3%) 
+        // was provided
+        return null;
+    }
+	
+}

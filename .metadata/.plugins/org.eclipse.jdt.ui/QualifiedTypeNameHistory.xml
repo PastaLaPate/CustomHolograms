@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
+    <fullyQualifiedTypeName name="fr.pastalapate.CustomHolograms.placeholders.HologramPlaceHolder"/>
+    <fullyQualifiedTypeName name="me.clip.placeholderapi.expansion.PlaceholderExpansion"/>
+    <fullyQualifiedTypeName name="fr.pastalapate.CustomHolograms.CHMain"/>
+    <fullyQualifiedTypeName name="fr.pastalapate.CustomHolograms.HologramExpansion"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger.Level"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+</qualifiedTypeNameHistroy>

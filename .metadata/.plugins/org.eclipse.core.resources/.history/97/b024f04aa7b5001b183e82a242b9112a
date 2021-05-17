@@ -1,0 +1,28 @@
+package fr.pastalapate.CustomHolograms.placeholders;
+
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+public class HologramPlaceHolder extends PlaceholderExpansion{
+
+	@Override
+    public boolean canRegister(){
+        return true;
+    }
+	
+	@Override
+	public String getAuthor() {
+		return "PastaLaPate";
+	}
+
+	@Override
+	public String getIdentifier() {
+		return "holograms";
+	}
+
+	@Override
+	public String getVersion() {
+		// TODO Auto-generated method stub
+		return "0.0.3";
+	}
+	
+}

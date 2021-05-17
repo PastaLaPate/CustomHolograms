@@ -1,0 +1,58 @@
+package fr.pastalapate.CustomHolograms;
+
+import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
+
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+public class HologramExpansion extends PlaceholderExpansion{
+
+	@Override
+	public String getAuthor() {
+		return "PastaLaPate";
+	}
+
+	@Override
+	public String getIdentifier() {
+		return "customholograms";
+	}
+
+	@Override
+	public String getVersion() {
+		return "0.0.3";
+	}
+	
+	@Override
+	public boolean canRegister() {
+		return true;
+	}
+	
+	@Override
+	public boolean persist() {
+		return true;
+	}
+	@Override
+	public String onRequest(OfflinePlayer player, String params) {
+		if(p!= null) {
+			
+		}
+	}
+	
+	
+	@Override
+	public String onPlaceholderRequest(Player p, String params) {
+		if(p == null) {
+			return "";
+		}
+		
+		//%customholograms.lastedhologramcreate%
+		
+		if(params.equals("latesthologramcreate")) {
+			return CHMain.getInstance().data.getLatestHologramCreate();
+		}
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,49 @@
+##Plugin version: 0.0.3
+##Config version: 0.0.3
+## Console Colors :
+##   RESET : "\u001B[0m"
+##   BLACK : "\u001B[30m"
+##   RED : "\u001B[31m"
+##   GREEN : "\u001B[32m"
+##   YELLOW : "\u001B[33m"
+##   BLUE : "\u001B[34m"
+##   PURPLE : "\u001B[35m
+##   CYAN "\u001B[36m"
+##   WHITE : "\u001B[37m"
+## Chat Colors :
+##  DARK_RED : &4
+##  RED : &c
+##  GOLD : &6
+##  YELLOW : &e
+##  DARK_GREEN : &2
+##  GREEN : &a
+##  AQUA : &b
+##  DARK_AQUA : &3 
+##  DARK_BLUE : &1
+##  BLUE : &9
+##  LIGHT_PURPLE : &d 
+##  DARK_PURPLE : &5
+##  WHITE : &f
+##  GRAY : &7
+##  DARK_GRAY : &8 
+##  DARK : &0
+##  RESET : &r
+##  BOLD : &l
+##  ITALIC : &o
+##  UNDERLINE : &n
+##  STRIKE : &m
+
+messages:
+  console:
+    utils:
+      ##Use Console colors
+      enabling-message: 'Enabling CustomHolograms...'
+      prefix: '\u001B[37m[\u001B[33mCustomHolograms\u001B[37m]\u001B[0m'
+  error:
+      ##Use console colors
+      console-cannot-execute-action: '\u001B[31mThe console cannot perform this action. To execute it you want to be a Player. '
+      ##Use Chat Colors
+      missing-arguments: '&cBe careful, this command needs more or less arguments. Do /hologram or /hologram help &cfor help on this command.'
+      hologram-already-exists: '&cSorry this hologram already exists !'
+      hologram-create-successfully: '%hologram.%' 
+      

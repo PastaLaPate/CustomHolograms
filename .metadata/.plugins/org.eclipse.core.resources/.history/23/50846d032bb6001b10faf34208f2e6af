@@ -1,0 +1,7 @@
+package fr.pastalapate.CustomHolograms;
+
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+public class HologramExpansion extends PlaceholderExpansion{
+
+}
